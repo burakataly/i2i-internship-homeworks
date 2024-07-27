@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<deployment>
+    <cluster>
+        <sitesperhost>4</sitesperhost>
+        <kfactor>0</kfactor>
+    </cluster>
+    <httpd>
+        <enabled>true</enabled>
+        <jsonapi enabled="true">
+            <jsonapiPort>8080</jsonapiPort>
+        </jsonapi>
+    </httpd>
+    <paths>
+        <path>
+            <voltdbroot>/var/voltdb</voltdbroot>
+        </path>
+    </paths>
+</deployment>
