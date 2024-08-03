@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Subscriber Created</title>
+  <link rel="stylesheet" th:href="@{/css/result.css}">
+</head>
+<body>
+<div class="container">
+  <h1>Subscriber Created</h1>
+  <p>Subscriber ID: <span th:text="${subscriber.id}"></span></p>
+  <p>Name: <span th:text="${subscriber.name}"></span></p>
+  <p>Surname: <span th:text="${subscriber.surname}"></span></p>
+  <p>MSISDN: <span th:text="${subscriber.MSISDN}"></span></p>
+  <p>Tariff ID: <span th:text="${subscriber.tariff_id}"></span></p>
+  <p>Start Date: <span th:text="${subscriber.start_date}"></span></p>
+  <a class="back-link" th:href="@{/subscribers/new}">Back to form</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Subscribers</title>
+    <link rel="stylesheet" th:href="@{/css/result.css}">
+</head>
+<body>
+<div class="container">
+    <h1>All Subscribers</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>MSISDN</th>
+            <th>Tariff ID</th>
+            <th>Start Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="subscriber : ${subscribers}">
+            <td th:text="${subscriber.id}"></td>
+            <td th:text="${subscriber.name}"></td>
+            <td th:text="${subscriber.surname}"></td>
+            <td th:text="${subscriber.MSISDN}"></td>
+            <td th:text="${subscriber.tariff_id}"></td>
+            <td th:text="${subscriber.start_date}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a class="back-link" th:href="@{/subscribers/new}">Back to form</a>
+</div>
+</body>
+</html>
