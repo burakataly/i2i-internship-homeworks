@@ -12,7 +12,7 @@ public class MessageDeserializer implements Deserializer<Message> {
         try {
             return objectMapper.readValue(data, Message.class);
         } catch (Exception e) {
-            throw new RuntimeException("Error deserializing OperationMessage", e);
+            throw new RuntimeException("Error deserializing Message", e);
         }
     }
 }
